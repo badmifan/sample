@@ -1,3 +1,5 @@
+@Library('jenkins-shared-libs@master') _
+
 pipeline {
   agent any
 
@@ -9,13 +11,9 @@ pipeline {
     }
     stage('Build') {
       steps {
-        script {
-          sh '''
-            sudo docker version
-            sudo docker build -t mikhaild/hellonode:latest .
-            sudo docker image ls
-          '''
-        }
+        dockerCmd 'version'
+        dockerCmd 'build -t mikhaild/hellonode:latest .'
+        dockerCmd 'image ls'
       }
     }
   }
