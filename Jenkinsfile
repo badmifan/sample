@@ -9,6 +9,11 @@ pipeline {
         checkout scm
       }
     }
+    stage('Get Dockerfile') {
+      steps {
+        createDockerfile()
+      }
+    }
     stage('Build') {
       steps {
         dockerCmd 'version'
