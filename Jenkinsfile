@@ -12,7 +12,7 @@ pipeline {
         script {
           sh '''
             sudo docker version
-            sudo docker build -t ealebed/hellonode:latest .
+            sudo docker build -t mikhaild/hellonode:latest .
             sudo docker image ls
           '''
         }
