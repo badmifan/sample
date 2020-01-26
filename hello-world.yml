@@ -32,7 +32,7 @@ metadata:
   name: hello-world-service
 spec:
   ports:
-  - nodePort: 8888
+  - nodePort: 30808
     targetPort: 8080
     port: 8080
     protocol: TCP
