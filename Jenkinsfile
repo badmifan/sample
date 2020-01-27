@@ -16,7 +16,7 @@ pipeline{
             steps{
                 script{
                     sh '''
-                        docker login
+                       
                         docker build \
                             -f Dockerfile \
                             -t ${DOCKER_IMAGE} .
